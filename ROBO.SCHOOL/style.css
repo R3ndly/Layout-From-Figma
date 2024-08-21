@@ -1,0 +1,500 @@
+@font-face {
+    font-family: "Jost-Regular";
+    src: url("./fonts/Jost-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Jost-Bold";
+    src: url("./fonts/Jost-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Jost-SemiBold";
+    src: url("./fonts/Jost-SemiBold.ttf");
+}
+
+body {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: "Jost-Regular";
+
+    margin: 0;
+    padding: 0;
+
+    color:azure;
+}
+
+.container {
+    box-sizing: border-box;
+    max-width: 1140px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+} 
+
+a {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+
+    color:azure;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: red;
+    border-radius: 8px;
+
+    height: 80px;
+    width: 270px;
+
+    font-size: 18px;
+    font-family: "Jost-Regular";
+
+    transition: opacity 0.1s;
+}
+
+.btn:hover {
+    opacity: 0.6;
+}
+
+.company__logo {
+    margin-left: 90px;
+    font-family: "Jost-Bold";
+    font-size: 30px;
+}
+
+.company__number {
+    font-family: "Jost-SemiBold";
+    font-size: 1.875em;
+    margin-right: 90px;
+}
+
+main.main{
+    color: black;
+}
+
+
+
+
+
+/* Шапка */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 28px;
+}
+
+.header h1 {
+    font-family: "Jost-Bold";
+    font-size: 3.2vh;
+}
+
+.header .container {
+    width: 1140px;
+    margin: 0;
+}
+
+.header__link {
+    display: flex;
+    justify-content: center;
+
+    gap: 60px;
+}
+
+.header__item {
+    transition: opacity 0.2s;
+}
+
+.header__item:hover {
+    opacity: 0.5;
+}
+
+
+
+
+/* Первая секция: welcome */
+.welcome {
+    background-image: url("./img/welcome-bg.jpg");
+    margin-top: -130px;
+
+    min-height: 107vh;
+    min-width: 100vw;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    color: azure;
+}
+
+.welcome .container {
+    margin-right: 0;
+    margin-left: 350px;
+}
+
+.welcome__text {
+    height: 325px;
+    width: 460px;    
+}
+
+.welcome__title {
+    font-family: "Jost-SemiBold";
+    font-size: 60px;
+    padding: 20px 0;
+}
+
+.welcome__description {
+    font-size: 19px;
+    margin-bottom: 50px;
+}
+
+.welcome img {
+    margin-right: 270px;
+    height: 810px;
+    align-self: flex-end;
+}
+
+
+
+
+
+/* Вторая секция: about-school */
+.about-shool{
+    height: 610px;
+}
+
+.about-school__text {
+    width: 750px;
+    padding: 120px 0 60px;
+}
+
+.about-shool__title {
+    display: inline;
+    font-size: 30px;
+}
+
+.about-shool__description {
+    display: inline;
+    font-size: 26px;
+}
+
+.about-school__statistic-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
+    grid-gap: 34px
+    
+}
+
+.about-school__statistic-number {
+    font-size: 68px;
+    color: red;
+}
+
+.about-school__statistic-description {
+    opacity: 0.6;
+    font-size: 17px;
+}
+
+
+
+
+
+/* Третья секция: result */
+.result__title {
+    font-size: 46px;
+    margin-bottom: 60px;
+    font-family: "Jost-SemiBold";
+}
+
+.result__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 310px);
+    grid-gap: 40px;
+}
+
+.result__block-title {
+    font-family: "Jost-SemiBold";
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.result__block-info {
+    position: relative;
+    display: flex;
+  }
+  
+  .result__block-info span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: #bbbbbb;
+    color: black;
+    border-radius: 50%;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .result__block-tooltip {
+    visibility: hidden;
+    width: 230px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -115px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    outline: 2px solid rgba(0, 0, 0, 0.08);
+    outline-offset: -5px;
+  }
+  
+  .result__block-info span:hover + .result__block-tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+.result__block-description {
+    opacity: 0.6;
+    padding-bottom: 220px;
+}
+
+
+
+
+
+/* Четвёртая секция: coach */
+.coach {
+    margin-bottom: 120px;
+}
+
+.coach__card-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 37px;
+}
+
+.coach__title {
+    font-family: "Jost-SemiBold";
+    font-size: 43px;
+    margin-bottom: 60px;
+}
+
+.coach__card-image {
+    border-radius: 22px;
+    width: 350px;
+}
+
+.coach__name {
+    font-family: "Jost-SemiBold";
+    font-size: 24px;
+}
+
+.coach__description {
+    opacity: 0.6;
+    margin: 10px 0 20px;
+}
+
+.coach__info {
+    color: red;
+}
+
+
+
+
+/* Пятая секция: bundle */
+.bundle__title {
+    font-family: "Jost-SemiBold";
+    font-size: 48px;
+    margin-bottom: 60px;
+}
+
+.bundle__list {
+    display: flex;
+    gap: 41px;
+}
+
+.bundle__card{
+    width: 340px;
+    height: 445px;
+
+    border-radius: 20px;
+    border: 1px solid #c4c2c2;
+
+    text-align: center;
+}
+
+.bundle__card.pro-version{
+    height: 495px;
+    border: 0px;
+
+    background-color: #141024;
+    color: azure;
+
+    margin: -20px 0 120px;
+}
+
+.bundle__card.pro-version .bundle__card-title{
+    padding: 40px 0 83px;
+}
+
+.bundle__card-title{
+    font-size: 28px;
+    padding: 40px 0 63px;
+}
+
+.bundle__card-price {
+    font-family: "Jost-SemiBold";
+    font-size: 48px;
+}
+
+.bundle__card-description {
+    padding: 35px 0 52px;
+    font-family: "Jost-Regular";
+    opacity: 0.8;
+}
+
+.bundle__card .btn{
+    margin: 0 auto;
+}
+
+
+
+
+
+/* Шестая секция: registation */
+.registration {
+    background-color: #D52027;
+}
+
+.registration .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.registration__text {
+    color: azure;
+    margin-left: 60px;
+}
+
+.registration__title {
+    font-family: "Jost-SemiBold";
+    font-size: 33px;
+
+    width: 340px;
+    margin: 106px 0 20px;
+}
+
+.registration__description {
+    font-size: 17px;
+}
+
+.registration__form {
+    display: flex;
+    flex-direction: column;
+    
+    margin: 87px 60px 87px 120px;
+}
+
+.registration__input {
+    width: 450px;
+    height: 60px;
+
+    margin: 5px 0;
+    padding: 0 20px;
+
+    font-size: 16px;
+    
+    border: 0;
+    border-radius: 6px;
+}
+
+.input-btn {
+    padding: 0;
+    width: 490px;
+
+    background-color: #141024;
+    color: azure;
+
+    transition: color 0.2s;
+}
+
+.input-btn:hover {
+    color: #bbbbbb
+}
+
+
+
+
+
+/* Седьмая секция: footer */
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #141024;
+    height: 150px;
+}
+  
+.footer__top {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0 5px ;
+}
+
+.footer__copy {
+    font-size: 15px;
+    margin-left: 90px;
+    margin-bottom: 40px;
+}
+
+
+
+
+
+
+@media (max-width: 320px) {
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .header__link {
+        visibility: hidden;
+    }
+
+    .header .company__number {
+        
+    }
+
+    .welcome img {
+        height: 320px;
+    }
+}
